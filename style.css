@@ -19,16 +19,18 @@
   --main-color: #0ef;
 }
 
-body {
+html {
   font-size: 62.5%;
-  overflow-x: hidden;
+   overflow-x: hidden;
+}
+body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
 
 section {
   min-height: 100vh;
-  padding: 10em 9% 2em;
+  padding: 10rem 9% 2rem;
 }
 
 .header {
@@ -45,18 +47,18 @@ section {
 }
 
 .header.sticky {
-  border-bottom: 0.1em solid rgb(0, 0, 0, 0.2);
+  border-bottom: 0.1rem solid rgb(0, 0, 0, 0.2);
 }
 
 .header .logo {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   color: var(--text-color);
   font-weight: 600;
   cursor: default;
 }
 
 .navbar a {
-  font-size: 1.7em;
+  font-size: 1.7rem;
   color: var(--text-color);
   margin-left: 4rem;
 }
@@ -67,7 +69,7 @@ section {
 }
 
 #menu-icon {
-  font-size: 3.6em;
+  font-size: 5.6rem;
   color: var(--text-color);
   display: none;
 }
@@ -79,7 +81,7 @@ section {
 }
 
 .home-content h3 {
-  font-size: 3.2em;
+  font-size: 3.2rem;
   font-weight: 700;
 }
 
@@ -92,13 +94,13 @@ span {
 }
 
 .home-content h1 {
-  font-size: 5.6em;
+  font-size: 5.6rem;
   font-weight: 700;
   line-height: 1.3;
 }
 
 .home-content p {
-  font-size: 1.6em;
+  font-size: 1.6rem;
 }
 
 .home .home-img img {
@@ -128,13 +130,13 @@ span {
 
 .btn {
   display: inline-block;
-  padding: 1em 1.2em;
+  padding: 1rem 1.2rem;
   background: var(--main-color);
-  border-radius: 4em;
-  box-shadow: 0 0 1em var(--main-color);
-  font-size: 1.6em;
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
   color: var(--second-bg-color);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1rem;
   font-weight: 600;
   transition: 0.5s ease;
 }
@@ -158,7 +160,7 @@ span {
 
 .heading {
   text-align: center;
-  font-size: 4em;
+  font-size: 4rem;
 }
 
 .about-content h2 {
@@ -167,12 +169,16 @@ span {
 }
 
 .about-content h3 {
-  font-size: 2.6em;
+  font-size: 2.6rem;
 }
 
 .about-content p {
-  font-size: 1.6em;
-  margin: 2em 0 3em;
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+.services h2 {
+  margin-bottom: 2rem;
 }
 
 .services-container {
@@ -184,12 +190,12 @@ span {
 }
 
 .services-container .services-box {
-  flex: 1 1 30em;
+  flex: 1 1 30rem;
   background: var(--second-bg-color);
-  padding: 3em 2em 4em;
-  border-radius: 2em;
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
   text-align: center;
-  border: 0.2em solid var(--bg-color);
+  border: 0.2rem solid var(--bg-color);
   transition: 0.5s;
 }
 
@@ -199,17 +205,17 @@ span {
 }
 
 .services-box i {
-  font-size: 7em;
+  font-size: 7rem;
   color: var(--main-color);
 }
 
 .services-box h3 {
-  font-size: 2.6em;
+  font-size: 2.6rem;
 }
 
 .services-box p {
-  font-size: 1.5em;
-  margin: 1em 0 2em;
+  font-size: 1.5rem;
+  margin: 1rem 0 2rem;
 }
 
 .portfolio {
@@ -217,13 +223,14 @@ span {
 }
 
 .portfolio h2 {
-  margin-bottom: 1em;
+
+  margin-bottom: 3rem;
 }
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  gap: 2.5em;
+  gap: 2.5rem;
 }
 
 .portfolio-box img {
@@ -237,7 +244,7 @@ span {
 
 .portfolio-container .portfolio-box {
   position: relative;
-  border-radius: 2em;
+  border-radius: 2rem;
   box-shadow: 0 0 1rem var(--bg-color);
   overflow: hidden;
   display: flex;
@@ -265,19 +272,19 @@ span {
 }
 
 .portfolio-layer h4 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 .portfolio-layer p {
-  font-size: 1.6em;
-  margin: 0.3em 0 1em;
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
 }
 
 .portfolio-layer a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 5em;
-  height: 5em;
+  width: 5rem;
+  height: 5rem;
   background: var(--text-color);
 
   border-radius: 50%;
@@ -285,18 +292,18 @@ span {
 
 .portfolio-layer a i {
   color: var(--second-bg-color);
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .contact h2 {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .contact form {
-  max-width: 70em;
-  margin: 1em auto;
+  max-width: 70rem;
+  margin: 1rem auto;
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: 3rem;
 }
 
 .contact form .input-box {
@@ -308,12 +315,12 @@ span {
 .contact form .input-box input,
 .contact form textarea {
   width: 100%;
-  padding: 1.4em;
-  font-size: 1.6em;
+  padding: 1.4rem;
+  font-size: 1.6rem;
   color: var(--text-color);
   background: var(--second-bg-color);
-  border-radius: 0.8em;
-  margin: 0.7em 0;
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
 }
 
 .contact form .input-box input {
@@ -325,7 +332,7 @@ span {
 }
 
 .contact form .btn {
-  margin-top: 2em;
+  margin-top: 2rem;
   cursor: pointer;
 }
 
@@ -334,50 +341,51 @@ span {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2em 9%;
+  padding: 2rem 9%;
   background: var(--second-bg-color);
 }
 
 .footer-text p {
-  font-size: 1.6em;
+  font-size: 1.6rem;
 }
 
 .footer-icontop a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 0.8em;
+  padding: 0.8rem;
   background: var(--main-color);
-  border-radius: 0.8em;
+  border-radius: 0.8rem;
   transition: 0.5s ease;
 }
 
 .footer-icontop a:hover {
-  box-shadow: 0 0 1em var(--main-color);
+  box-shadow: 0 0 1rem var(--main-color);
 }
 
 .footer-icontop a i {
-  font-size: 2.4em;
+  font-size: 2.4rem;
   color: var(--second-bg-color);
 }
 
 @media (max-width: 1200px) {
   html {
-    font-size: 55%;
+    font-size: 50%;
   }
+
 }
 
 @media (max-width: 991px) {
   .header {
-    padding: 2em 3%;
+    padding: 2rem 3%;
   }
 
   section {
-    padding: 10em 3% 2em;
+    padding: 10rem 3% 2rem;
   }
 
   .services {
-    padding-bottom: 7em;
+    padding-bottom: 7rem;
   }
 
   .portfolio{
@@ -389,7 +397,7 @@ span {
   }
 
   .footer {
-    padding: 2em 3%;
+    padding: 2rem 3%;
   }
 }
 
@@ -403,9 +411,9 @@ span {
     top: 100%;
     left: 0;
     width: 100%;
-    padding: 1em 3%;
+    padding: 1rem 3%;
     border-top: 0.1em solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     display: none;
   }
 
@@ -415,8 +423,8 @@ span {
 
   .navbar a {
     display: block;
-    font-size: 2em;
-    margin: 2em 0;
+    font-size: 2rem;
+    margin: 2rem 0;
   }
 
   .home{
