@@ -143,3 +143,11 @@ window.onscroll = () => {
   menuIcon.classList.remove("bx-x");
   navbar.classList.remove("active");
 };
+
+// typing
+const typing = new Typed(".multiple-text", {
+  strings: ["ReactJS", "NodeJS"],
+  typeSpeed: 100,
+  cursorChar:"|",
+  loop: true,
+})

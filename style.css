@@ -129,6 +129,15 @@ span {
   color: var(--main-color);
 }
 
+.multiple-text{
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.typed-cursor {
+  font-size: 2rem;
+}
+
 .home-content h1 {
   font-size: 5.6rem;
   font-weight: 700;
