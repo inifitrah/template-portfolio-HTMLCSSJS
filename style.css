@@ -239,7 +239,7 @@ span {
 }
 
 .portfolio {
-  background: var(--bg-color);
+  background: var(--second-bg-color);
 }
 
 .portfolio h2 {
