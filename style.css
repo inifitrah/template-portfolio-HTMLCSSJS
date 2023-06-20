@@ -12,6 +12,7 @@
   font-family: "Poppins", sans-serif;
 }
 
+
 :root {
   --bg-color: #e4e5f1;
   --second-bg-color: #fafafa;
@@ -59,14 +60,17 @@ section {
 }
 
 #modes{
-
   font-size: 3rem;
   color: var(--text-color);
   padding: 1rem;
   border-radius: 50%; 
-  
-  
+  position: absolute;
+ 
+  right: 22px;
+  top: 12px;
 }
+
+
 #modes:active{
   background: rgb(0, 0, 0, .2);
 }
@@ -82,6 +86,8 @@ section {
   font-weight: 600;
   cursor: default;
 }
+
+
 
 .navbar a {
   font-size: 1.7rem;
@@ -212,7 +218,8 @@ span {
   transition: 0.5s;
 }
 
-.skills-container .skills-box:hover {
+.skills-container .skills-box:hover,
+.skills-container .skills-box:active{
   border-color: var(--main-color);
   transform: scale(1.05);
 }
@@ -281,6 +288,10 @@ span {
   transform: translateY(0%);
 }
 
+/* nanti saya fix 
+ masalahnya ketika ku aktifkan hover jadi ngebug karena adda class translated
+*/
+
 /* .portfolio-box:hover .portfolio-layer{
   transform: translateY(100%);
 } */
@@ -314,7 +325,7 @@ span {
   bottom: 5%;
   right: 5%;
   border-radius: 50%;
-  display: none;
+  /* display: none; */
   color: white;
     font-size: 5rem;
 }
@@ -349,6 +360,9 @@ span {
   html {
     font-size: 50%;
   }
+  #modes{
+    right: 400px;
+  }
 
 }
 
@@ -356,6 +370,12 @@ span {
   .header {
     padding: 2rem 3%;
   }
+
+  #modes{
+    right: 333px;
+  }
+  
+  
 
   section {
     padding: 10rem 3% 2rem;
@@ -375,6 +395,11 @@ span {
 }
 
 @media (max-width: 768px) {
+  #modes{
+    right: 80px;
+    top: 18px;
+  }
+  
   #menu-icon {
     display: block;
   }
@@ -439,6 +464,10 @@ span {
 }
 
 @media (max-width: 617px) {
+
+  
+
+
   .portfolio-container {
     grid-template-columns: 1fr;
   }
@@ -452,8 +481,16 @@ span {
   html {
     font-size: 50%;
   }
+
+  #modes{
+    right: 70px;
+  }
+
 }
 @media (max-width: 365px) {
+
+
+
   .home-img img {
     width: 90vw;
   }

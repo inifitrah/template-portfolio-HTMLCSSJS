@@ -12,13 +12,11 @@ modes.addEventListener("click", function () {
 
 let portLayer = document.querySelectorAll(".portfolio-layer");
 let arrows = document.querySelectorAll(".arrows");
-console.log(arrows);
 
 arrows.forEach((arr, index) => {
-  console.log(arr)
-  console.log(index)
   arr.onclick = () => {
     arr.classList.toggle("bx-x");
+   
     portLayer[index].classList.toggle("translated");
   };
 });
