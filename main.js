@@ -151,3 +151,21 @@ const typing = new Typed(".multiple-text", {
   cursorChar:"|",
   loop: true,
 })
+
+
+//  scroll reveal
+
+ScrollReveal({
+  distance: '80px',
+  duration: 2000,
+  delay: 200,
+});
+
+ScrollReveal().reveal(".home-content", { origin: 'top' });
+ScrollReveal().reveal(".home-content h1", { origin: 'left' });
+
+ScrollReveal().reveal(".home-img", { origin: 'bottom'});
+ScrollReveal().reveal(".heading", { origin: 'right'});
+ScrollReveal().reveal(".about .about-img", { origin: 'left' });
+ScrollReveal().reveal(".skills-box, .portfolio-box", { origin: 'bottom' });
+
