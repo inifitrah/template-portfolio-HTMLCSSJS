@@ -165,7 +165,7 @@ ScrollReveal().reveal(".home-content", { origin: 'top' });
 ScrollReveal().reveal(".home-content h1", { origin: 'left' });
 
 ScrollReveal().reveal(".home-img", { origin: 'bottom'});
-ScrollReveal().reveal(".heading", { origin: 'right'});
-ScrollReveal().reveal(".about .about-img", { origin: 'left' });
+ScrollReveal().reveal(".heading", { origin: 'top'});
+ScrollReveal().reveal(".about .about-img", { origin: 'bottom' });
 ScrollReveal().reveal(".skills-box, .portfolio-box", { origin: 'bottom' });
 
