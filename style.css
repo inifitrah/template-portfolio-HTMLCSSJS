@@ -76,6 +76,10 @@ section {
 }
 
 
+#myLogoImage{
+  transition: .5s ease;
+}
+
 .header.sticky {
   border-bottom: 0.1rem solid rgb(0, 0, 0, 0.2);
 }
@@ -203,7 +207,6 @@ span {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
 }
-
 .skills h2 {
   margin-bottom: 2rem;
 }
@@ -455,7 +458,7 @@ span {
   }
 
   .about img {
-    width: 70vw;
+    width: 45vw;
     margin-top: 4rem;
   }
 

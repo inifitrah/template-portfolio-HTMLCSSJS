@@ -5,8 +5,19 @@ const imgAbout = document.querySelector(".about img");
 const portLayer = document.querySelectorAll(".portfolio-layer");
 const arrows = document.querySelectorAll(".arrows");
 
+// logo dark light
+ function toggleImage() {
+   const image = document.getElementById("myLogoImage");
+   if (image.src.includes("img/logo/trahdark.png")) {
+     image.src = "img/logo/trah.png";
+   } else {
+     image.src = "img/logo/trahdark.png";
+   }
+ }
+
 modes.addEventListener("click", function () {
   modes.classList.toggle("bxs-sun");
+  toggleImage();
   document.body.classList.toggle("active-mode");
 });
 
@@ -91,7 +102,7 @@ ScrollReveal({
 ScrollReveal().reveal(".home-content", { origin: "top" });
 ScrollReveal().reveal(".home-content h1", { origin: "left" });
 ScrollReveal().reveal(".home-img", { origin: 'bottom'});
-ScrollReveal().reveal(".heading", { origin: 'bottom'});
+ScrollReveal().reveal(".about-content h3", { origin: 'left'});
 ScrollReveal().reveal(".about .about-img", { origin: 'bottom' });
 ScrollReveal().reveal(".skills-box, .portfolio-box", { origin: 'bottom' });
 
