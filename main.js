@@ -1,22 +1,19 @@
-let menuIcon = document.querySelector("#menu-icon");
-let navbar = document.querySelector(".navbar");
-
-let modes = document.getElementById("modes");
-
+const menuIcon = document.querySelector("#menu-icon");
+const navbar = document.querySelector(".navbar");
+const modes = document.getElementById("modes");
+const imgAbout = document.querySelector(".about img");
+const portLayer = document.querySelectorAll(".portfolio-layer");
+const arrows = document.querySelectorAll(".arrows");
 
 modes.addEventListener("click", function () {
   modes.classList.toggle("bxs-sun");
   document.body.classList.toggle("active-mode");
 });
 
-
-let portLayer = document.querySelectorAll(".portfolio-layer");
-let arrows = document.querySelectorAll(".arrows");
-
 arrows.forEach((arr, index) => {
   arr.onclick = () => {
     arr.classList.toggle("bx-x");
-   
+
     portLayer[index].classList.toggle("translated");
   };
 });
@@ -41,89 +38,20 @@ document.addEventListener("scroll", () => {
   });
 });
 
-
-
-
-
-// let portLayer = document.querySelectorAll(".portfolio-layer");
-// let arrows = document.querySelectorAll(".arrows");
-// console.log(arrows);
-
-// arrows.forEach((arr) => {
-//   console.log("console arr" + arr)
-//   arr.onclick = () => {
-//     arr.classList.toggle("bx-x");
-
-//     portLayer.forEach((element) => {
-//       console.log(element);
-//       if (arr.classList.contains("bx-x")) {
-//         element.classList.add("translated");
-//       } else {
-//         element.classList.remove("translated");
-//       }
-//     });
-//   };
-// });
-
-
-
-
-// let portLayer = document.querySelectorAll(".portfolio-layer");
-// let arrows = document.querySelectorAll(".arrows");
-// console.log(arrows)
-// arrows.onclick = () => {
-//   arrows.forEach((arr) => {
-
-
-//     arr.classList.toggle("bx-x");
-  
-//     portLayer.forEach((element) => {
-//       console.log(element)
-//       if (arrows.classList.contains("bx-x")) {
-//         element.classList.add("translated");
-//       } else {
-//         element.classList.remove("translated");
-//       }
-//     });
-//   }
-    
-// )}
-
-
-
-// let portLayer = document.querySelectorAll(".portfolio-layer");
-// let arrow = document.querySelector("#arrow");
-
-// arrow.onclick = () => {
-//   arrow.classList.toggle("bx-x");
-
-//   portLayer.forEach((anu) => { 
-  
-    
-//     for (i = 0; i < anu.length; i++) {
-//       if (arrow.classList.contains("bx-x")) {
-//         anu.style.transform = "translateY(0%)";
-//       } else {
-//         anu.style.transform = "translateY(100%)";
-//       }
-//     }
-//   }) 
-// };
-
 menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 };
 
-let sections = document.querySelectorAll("section");
-let navLink = document.querySelectorAll("header nav a");
+const sections = document.querySelectorAll("section");
+const navLink = document.querySelectorAll("header nav a");
 
 window.onscroll = () => {
   sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
+    const top = window.scrollY;
+    const offset = sec.offsetTop - 150;
+    const height = sec.offsetHeight;
+    const id = sec.getAttribute("id");
 
     if (top >= offset && top < offset + height) {
       navLink.forEach((links) => {
@@ -136,7 +64,7 @@ window.onscroll = () => {
   });
 
   // sticky navbar
-  let header = document.querySelector("header");
+  const header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 100);
 
   // remove toggle icon navbar whem click nsvbsr link
@@ -148,24 +76,22 @@ window.onscroll = () => {
 const typing = new Typed(".multiple-text", {
   strings: ["ReactJS", "NodeJS"],
   typeSpeed: 100,
-  cursorChar:"|",
+  cursorChar: "|",
   loop: true,
-})
-
+});
 
 //  scroll reveal
 
 ScrollReveal({
-  distance: '80px',
+  distance: "80px",
   duration: 2000,
   delay: 200,
 });
 
-ScrollReveal().reveal(".home-content", { origin: 'top' });
-ScrollReveal().reveal(".home-content h1", { origin: 'left' });
+ScrollReveal().reveal(".home-content", { origin: "top" });
+ScrollReveal().reveal(".home-content h1", { origin: "left" });
 
-ScrollReveal().reveal(".home-img", { origin: 'bottom'});
-ScrollReveal().reveal(".heading", { origin: 'right'});
-ScrollReveal().reveal(".about .about-img", { origin: 'left' });
-ScrollReveal().reveal(".skills-box, .portfolio-box", { origin: 'bottom' });
-
+ScrollReveal().reveal(".home-img", { origin: "bottom" });
+ScrollReveal().reveal(".heading", { origin: "right" });
+ScrollReveal().reveal(".about .about-img", { origin: "left" });
+ScrollReveal().reveal(".skills-box, .portfolio-box", { origin: "bottom" });
