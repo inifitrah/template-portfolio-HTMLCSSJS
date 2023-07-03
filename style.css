@@ -19,6 +19,8 @@
   --text-color: black;
   --main-color: #6555E7;
   --bg-port: #6555E7;
+  --bg-img-home: #a8a7a7;
+
 }
 
 html {
@@ -37,6 +39,7 @@ body.active-mode {
   --text-color: #fff;
   --main-color: #0ef;
   --bg-port: black;
+  --bg-img-home: #0ef;
 }
 
 
@@ -156,6 +159,7 @@ span {
   width: 30vw;
   border-radius: 50%;
   box-shadow: 0 0 1.3rem 0.2rem var(--main-color);
+  background: var(--bg-img-home);
 }
 
 

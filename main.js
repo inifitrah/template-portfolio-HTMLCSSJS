@@ -6,14 +6,18 @@ const portLayer = document.querySelectorAll(".portfolio-layer");
 const arrows = document.querySelectorAll(".arrows");
 
 // logo dark light
- function toggleImage() {
-   const image = document.getElementById("myLogoImage");
+const image = document.getElementById("myLogoImage");
+function toggleImage() {
    if (image.src.includes("img/logo/trahdark.png")) {
      image.src = "img/logo/trah.png";
    } else {
      image.src = "img/logo/trahdark.png";
    }
- }
+}
+
+
+
+
 
 modes.addEventListener("click", function () {
   modes.classList.toggle("bxs-sun");
@@ -24,10 +28,14 @@ modes.addEventListener("click", function () {
 arrows.forEach((arr, index) => {
   arr.onclick = () => {
     arr.classList.toggle("bx-x");
-
     portLayer[index].classList.toggle("translated");
   };
 });
+
+
+
+
+
 
 document.addEventListener("click", (event) => {
   if (!event.target.closest(".arrows")) {
@@ -48,6 +56,11 @@ document.addEventListener("scroll", () => {
     arr.classList.remove("bx-x");
   });
 });
+
+
+
+
+
 
 menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
@@ -74,14 +87,22 @@ window.onscroll = () => {
     }
   });
 
+
+
+
   // sticky navbar
   const header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 100);
+
+
 
   // remove toggle icon navbar whem click nsvbsr link
   menuIcon.classList.remove("bx-x");
   navbar.classList.remove("active");
 };
+
+
+
 
 // typing
 const typing = new Typed(".multiple-text", {
