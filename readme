@@ -1,9 +1,0 @@
-#HTML CSS JS dan sedikit library
-
-ket * = tugas dari diri sendiri
-
-*saya ingin membuat dibagian project itu transformnya 100% tetapi ketika x di hover atau di klik maka akan menghilaang tulisan no project yet.
-
-*mengurangi penggunaan add event listener
-
-*belajar lagi tentang pengelolaan aset. agar tidak delay. kalau bisa si belajar bikin animasi loading. lazy load juga
