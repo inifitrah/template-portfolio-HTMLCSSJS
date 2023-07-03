@@ -105,11 +105,10 @@ window.onscroll = () => {
 
 
 // typing
-const typing = new Typed(".multiple-text", {
-  strings: ["ReactJS", "NodeJS"],
+const typing = new Typed(".typingjs", {
+  strings: ['Web Developer','FullStack JS'],
   typeSpeed: 100,
   cursorChar: "|",
-  loop: true,
 });
 
 //  scroll reveal
