@@ -299,13 +299,6 @@ span {
   transform: translateY(0%);
 }
 
-/* nanti saya fix 
- masalahnya ketika ku aktifkan hover jadi ngebug karena adda class translated
-*/
-
-/* .portfolio-box:hover .portfolio-layer{
-  transform: translateY(100%);
-} */
 
 
 .portfolio-layer h4 {
@@ -320,8 +313,8 @@ span {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   background: var(--text-color);
   border-radius: 50%;
 }
