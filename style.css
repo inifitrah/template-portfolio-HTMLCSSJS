@@ -337,12 +337,13 @@ span {
   right: 5%;
   border-radius: 50%;
   /* display: none; */
-  color: white;
-    font-size: 5rem;
+  color: rgb(255, 255, 255);
+    font-size: 4rem;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .arrows:active {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0);
 }
 
 .footer {
@@ -411,6 +412,12 @@ span {
     top: 18px;
   }
   
+
+  .arrows{
+    font-size: 5rem;
+  }
+
+
   #menu-icon {
     display: block;
   }
