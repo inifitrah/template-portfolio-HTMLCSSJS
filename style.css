@@ -7,20 +7,18 @@
   text-decoration: none;
   border: none;
   outline: none;
-  transition: background .5s ease;
+  transition: background 0.5s ease;
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
-
 
 :root {
   --bg-color: #e4e5f1;
   --second-bg-color: #fafafa;
   --text-color: black;
-  --main-color: #6555E7;
-  --bg-port: #6555E7;
+  --main-color: #6555e7;
+  --bg-port: #6555e7;
   --bg-img-home: #a8a7a7;
-
 }
 
 html {
@@ -31,6 +29,7 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+
 }
 
 body.active-mode {
@@ -41,8 +40,61 @@ body.active-mode {
   --bg-port: black;
   --bg-img-home: #0ef;
 }
+/* modal */
 
+.container-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 999;
+}
 
+.modal {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  width: 450px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  gap: 0.4rem;
+  padding: 1.3rem;
+  position: fixed;
+  top: 30%;
+  z-index: 2;
+}
+
+.modal .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 3rem;
+}
+
+.modal p {
+  font-size: 1.5rem;
+  color: #777;
+  margin: 0.4rem 0 0.2rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+/* akhir */
 
 section {
   min-height: 100vh;
@@ -62,25 +114,23 @@ section {
   background: var(--bg-color);
 }
 
-#modes{
+#modes {
   font-size: 3rem;
   color: var(--text-color);
   padding: 1rem;
-  border-radius: 50%; 
+  border-radius: 50%;
   position: absolute;
- 
+
   right: 22px;
   top: 12px;
 }
 
-
-#modes:active{
-  background: rgb(0, 0, 0, .2);
+#modes:active {
+  background: rgb(0, 0, 0, 0.2);
 }
 
-
-#myLogoImage{
-  transition: .5s ease;
+#myLogoImage {
+  transition: 0.5s ease;
 }
 
 .header.sticky {
@@ -93,8 +143,6 @@ section {
   font-weight: 600;
   cursor: default;
 }
-
-
 
 .navbar a {
   font-size: 1.7rem;
@@ -119,7 +167,7 @@ section {
   align-items: center;
 }
 
-.home-content{
+.home-content {
   margin-right: 2rem;
 }
 
@@ -135,7 +183,6 @@ section {
 span {
   color: var(--main-color);
 }
-
 
 .typed-cursor {
   font-size: 3.2rem;
@@ -158,7 +205,6 @@ span {
   background: var(--bg-img-home);
 }
 
-
 .btn {
   display: inline-block;
   padding: 1rem 1.2rem;
@@ -172,7 +218,8 @@ span {
   transition: 0.5s ease;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:active {
   box-shadow: none;
 }
 
@@ -230,7 +277,7 @@ span {
 }
 
 .skills-container .skills-box:hover,
-.skills-container .skills-box:active{
+.skills-container .skills-box:active {
   border-color: var(--main-color);
   transform: scale(1.05);
 }
@@ -265,9 +312,7 @@ span {
 
 .portfolio-box img {
   width: 100%;
-  transition: 0.5s ease;
 }
-
 
 .portfolio-container .portfolio-box {
   position: relative;
@@ -275,7 +320,6 @@ span {
   box-shadow: 0 0 2rem var(--main-color);
   overflow: hidden;
   display: flex;
-  
 }
 
 .portfolio-box .portfolio-layer {
@@ -283,7 +327,7 @@ span {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 110%;
   background: linear-gradient(rgba(0, 0, 0, 0.2), var(--bg-port));
   display: flex;
   align-items: center;
@@ -299,8 +343,6 @@ span {
 .portfolio-box div.translated {
   transform: translateY(0%);
 }
-
-
 
 .portfolio-layer h4 {
   font-size: 3rem;
@@ -332,8 +374,8 @@ span {
   border-radius: 50%;
   /* display: none; */
   color: rgb(255, 255, 255);
-    font-size: 4rem;
-    background: rgba(0, 0, 0, 0.2);
+  font-size: 4rem;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .arrows:active {
@@ -366,10 +408,9 @@ span {
   html {
     font-size: 50%;
   }
-  #modes{
+  #modes {
     right: 400px;
   }
-
 }
 
 @media (max-width: 991px) {
@@ -377,11 +418,9 @@ span {
     padding: 2rem 3%;
   }
 
-  #modes{
+  #modes {
     right: 333px;
   }
-  
-  
 
   section {
     padding: 10rem 3% 2rem;
@@ -401,16 +440,19 @@ span {
 }
 
 @media (max-width: 768px) {
-  #modes{
+
+  .modal{
+    width: 350px;
+  }
+
+  #modes {
     right: 80px;
     top: 18px;
   }
-  
 
-  .arrows{
+  .arrows {
     font-size: 5rem;
   }
-
 
   #menu-icon {
     display: block;
@@ -476,14 +518,10 @@ span {
 }
 
 @media (max-width: 617px) {
-
-  
-
-
   .portfolio-container {
     grid-template-columns: 1fr;
   }
-  
+
   .arrows {
     display: inherit;
   }
@@ -494,15 +532,11 @@ span {
     font-size: 50%;
   }
 
-  #modes{
+  #modes {
     right: 70px;
   }
-
 }
 @media (max-width: 365px) {
-
-
-
   .home-img img {
     width: 90vw;
   }

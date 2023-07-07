@@ -4,68 +4,132 @@ const modes = document.getElementById("modes");
 const imgAbout = document.querySelector(".about img");
 const portLayer = document.querySelectorAll(".portfolio-layer");
 const arrows = document.querySelectorAll(".arrows");
-
-// logo dark light
 const image = document.getElementById("myLogoImage");
-function toggleImage() {
-   if (image.src.includes("img/logo/trahdark.png")) {
-     image.src = "img/logo/trah.png";
-   } else {
-     image.src = "img/logo/trahdark.png";
-   }
+// logo dark light
+
+// function toggleImage() {
+//    if (image.src.includes("img/logo/trahdark.png")) {
+//      image.src = "img/logo/trah.png";
+//    } else {
+//      image.src = "img/logo/trahdark.png";
+//    }
+// }
+
+
+// modal
+const containerModal = document.querySelector('.container-modal')
+const modal = document.querySelector('.modal')
+const overlay = document.querySelector('.overlay')
+const btnClose = document.querySelector('.btn-modal-close')
+
+// const openModal = function () {
+//   modal.classList.remove('hidden')
+//   overlay.classList.remove('hidden')
+// }
+// const closeModal = function () {
+//   modal.classList.add('hidden')
+//   overlay.classList.add('hidden')
+// }
+
+const openModal = ()=>{
+  containerModal.classList.remove('hidden')
+}
+const closeModal = ()=>{
+  containerModal.classList.add('hidden')
 }
 
+// onload = openModal
+
+
+document.addEventListener('click', (e) => {
+ if(e.target == modes) openModal()
+  if (e.target == btnClose) closeModal()
+  if (e.target == overlay) closeModal()
+})
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !containerModal.classList.contains('hidden')) closeModal()
+})
 
 
 
+// versi document
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('bxs-moon')) {
+      e.target.classList.toggle("bxs-sun");
+      document.body.classList.toggle("active-mode");
 
-modes.addEventListener("click", function () {
-  modes.classList.toggle("bxs-sun");
-  toggleImage();
-  document.body.classList.toggle("active-mode");
-});
+      
+      function toggleImage() {
+        if (image.src.includes("img/logo/trahdark.png")) {
+          image.src = "img/logo/trah.png";
+        } else {
+          image.src = "img/logo/trahdark.png";
+        }
+      }
+      toggleImage()
+  }
+
+  if (e.target.classList.contains('bx-menu')) {
+    e.target.classList.toggle("bx-x");
+    navbar.classList.toggle("active");
+  }
+
+})
+
+
+
+// ini adalah fungsi ubah modeas
+// modes.addEventListener("click", function () {
+//   modes.classList.toggle("bxs-sun");
+//   toggleImage();
+//   document.body.classList.toggle("active-mode");
+// });
+
+
 
 arrows.forEach((arr, index) => {
-  arr.onclick = () => {
-    arr.classList.toggle("bx-x");
+  arr.addEventListener('mouseenter', () => {
+     arr.classList.add("bx-x");
+    portLayer[index].classList.add("translated");
+  })
+
+  arr.addEventListener('click', () => {
+     arr.classList.toggle("bx-x");
     portLayer[index].classList.toggle("translated");
-  };
+  })
 });
 
+// menuIcon.onclick = () => {
+//   menuIcon.classList.toggle("bx-x");
+//   navbar.classList.toggle("active");
+// };
 
 
 
 
+// fungsi ketika klik / scroll diluar box portf
+// document.addEventListener("click", (event) => {
+//   if (!event.target.closest(".arrows")) {
+//     portLayer.forEach((element) => {
+//       element.classList.remove("translated");
+//     });
+//     arrows.forEach((arr) => {
+//       arr.classList.remove("bx-x");
+//     });
+//   }
+// });
 
-document.addEventListener("click", (event) => {
-  if (!event.target.closest(".arrows")) {
-    portLayer.forEach((element) => {
-      element.classList.remove("translated");
-    });
-    arrows.forEach((arr) => {
-      arr.classList.remove("bx-x");
-    });
-  }
-});
-
-document.addEventListener("scroll", () => {
-  portLayer.forEach((element) => {
-    element.classList.remove("translated");
-  });
-  arrows.forEach((arr) => {
-    arr.classList.remove("bx-x");
-  });
-});
-
-
-
+// document.addEventListener("scroll", () => {
+//   portLayer.forEach((element) => {
+//     element.classList.remove("translated");
+//   });
+//   arrows.forEach((arr) => {
+//     arr.classList.remove("bx-x");
+//   });
+// });
+// akhir //
 
 
-
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
-};
 
 const sections = document.querySelectorAll("section");
 const navLink = document.querySelectorAll("header nav a");
@@ -88,6 +152,15 @@ window.onscroll = () => {
   });
 
 
+  portLayer.forEach((element) => {
+    element.classList.remove("translated");
+  });
+  arrows.forEach((arr) => {
+    arr.classList.remove("bx-x");
+  });
+
+
+
 
 
   // sticky navbar
@@ -97,12 +170,14 @@ window.onscroll = () => {
 
 
   // remove toggle icon navbar whem click nsvbsr link
-  menuIcon.classList.remove("bx-x");
-  navbar.classList.remove("active");
+  // menuIcon.classList.remove("bx-x");
+  // navbar.classList.remove("active");
 };
 
 
 
+
+// lirary
 
 // typing
 const typing = new Typed(".typingjs", {
