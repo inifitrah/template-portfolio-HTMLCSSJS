@@ -1,10 +1,18 @@
 const menuIcon = document.querySelector("#menu-icon");
 const navbar = document.querySelector(".navbar");
-const modes = document.getElementById("modes");
 const imgAbout = document.querySelector(".about img");
 const portLayer = document.querySelectorAll(".portfolio-layer");
 const arrows = document.querySelectorAll(".arrows");
 const image = document.getElementById("myLogoImage");
+
+// mode
+const modes = document.getElementById("modes");
+// next kalau ini
+const prefersDarkMode =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
+// console.log(prefersDarkMode)
+  
 
 // modal
 const containerModal = document.querySelector(".container-modal");
@@ -38,7 +46,8 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("bxs-moon")) {
     e.target.classList.toggle("bxs-sun");
-    document.body.classList.toggle("active-mode");
+    document.body.classList.toggle("active-mode")
+  
 
     function toggleImage() {
       if (image.src.includes("img/logo/trahdark.png")) {
