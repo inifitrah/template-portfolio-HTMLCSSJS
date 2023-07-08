@@ -6,8 +6,6 @@ const portLayer = document.querySelectorAll(".portfolio-layer");
 const arrows = document.querySelectorAll(".arrows");
 const image = document.getElementById("myLogoImage");
 
-
-
 // modal
 const containerModal = document.querySelector(".container-modal");
 const modal = document.querySelector(".modal");
@@ -18,14 +16,12 @@ const openModal = () => {
   containerModal.classList.remove("hidden");
 };
 const closeModal = () => {
-  containerModal.classList.add("hidden");
+  containerModal.classList.add("hidden")
 };
 
-// onload = openModal
 onload = setTimeout(() => {
   openModal();
-  console.log("ok");
-}, 4000);
+}, 5000);
 
 // modal
 document.addEventListener("click", (e) => {
@@ -108,25 +104,25 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
-// libary 
-// typing
-const typing = new Typed(".typingjs", {
-  strings: ["Web Developer", "FullStack JS"],
-  typeSpeed: 100,
-  cursorChar: "|",
-});
+// // libary
+// // typing
+  const typing = new Typed(".typingjs", {
+    strings: ["Web Developer", "FullStack JS"],
+    typeSpeed: 100,
+    cursorChar: "|",
+  });
+  //  scroll reveal
 
-//  scroll reveal
+  ScrollReveal({
+    distance: "80px",
+    duration: 2000,
+    delay: 200,
+  });
 
-ScrollReveal({
-  distance: "80px",
-  duration: 2000,
-  delay: 200,
-});
-
-ScrollReveal().reveal(".home-content", { origin: "top" });
-ScrollReveal().reveal(".home-content h1", { origin: "left" });
-ScrollReveal().reveal(".home-img", { origin: "bottom" });
-ScrollReveal().reveal(".about-content h3", { origin: "left" });
-ScrollReveal().reveal(".about .about-img", { origin: "bottom" });
-ScrollReveal().reveal(".skills-box, .portfolio-box", { origin: "bottom" });
+  ScrollReveal().reveal(".home-content", { origin: "top" });
+  ScrollReveal().reveal(".home-content h1", { origin: "left" });
+  ScrollReveal().reveal(".home-img", { origin: "bottom" });
+  ScrollReveal().reveal(".about-content h3", { origin: "left" });
+  ScrollReveal().reveal(".about .about-img", { origin: "bottom" });
+  ScrollReveal().reveal(".skills-box, .portfolio-box", { origin: "bottom" });
+  

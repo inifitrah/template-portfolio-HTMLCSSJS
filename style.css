@@ -320,7 +320,6 @@ span {
   bottom: 5%;
   right: 5%;
   border-radius: 50%;
-  /* display: none; */
   color: rgb(255, 255, 255);
   font-size: 4rem;
   background: rgba(0, 0, 0, 0.2);
@@ -547,6 +546,11 @@ font-size: 2rem;
 }
 
 @media (max-width: 617px) {
+
+   .modal{
+    width: 300px;
+  }
+
   .portfolio-container {
     grid-template-columns: 1fr;
   }
@@ -569,7 +573,9 @@ font-size: 2rem;
   html {
     font-size: 50%;
   }
-
+.modal{
+    width: 275px;
+  }
   #modes {
     right: 70px;
   }
