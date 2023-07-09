@@ -59,16 +59,24 @@ section {
   background: var(--bg-color);
 }
 
-#modes {
+.menu-mob{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-mob .modes{
+  display: none;
+}
+
+.modes {
   font-size: 3rem;
   color: var(--text-color);
-  padding: 1rem;
+  padding: .3rem;
   border-radius: 50%;
-  position: absolute;
-
-  right: 22px;
-  top: 12px;
+  z-index: 999999;
+  margin-left: 4rem;
 }
+
 
 #modes:active {
   background: rgb(0, 0, 0, 0.2);
@@ -87,6 +95,11 @@ section {
   color: var(--text-color);
   font-weight: 600;
   cursor: default;
+}
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar a {
@@ -426,9 +439,7 @@ font-size: 2rem;
   html {
     font-size: 50%;
   }
-  #modes {
-    right: 400px;
-  }
+  
 }
 
 @media (max-width: 991px) {
@@ -436,9 +447,6 @@ font-size: 2rem;
     padding: 2rem 3%;
   }
 
-  #modes {
-    right: 333px;
-  }
 
   section {
     padding: 10rem 3% 2rem;
@@ -462,12 +470,6 @@ font-size: 2rem;
   .modal{
     width: 350px;
   }
-
-  #modes {
-    right: 80px;
-    top: 18px;
-  }
-
   .arrows {
     font-size: 5rem;
   }
@@ -475,6 +477,14 @@ font-size: 2rem;
   #menu-icon {
     display: block;
   }
+  .header .modes {
+    display: block;
+  }
+
+  .navbar .modes {
+    display: none;
+  }
+
   .navbar {
     background: var(--bg-color);
     position: absolute;
@@ -575,10 +585,7 @@ font-size: 2rem;
   }
 .modal{
     width: 275px;
-  }
-  #modes {
-    right: 70px;
-  }
+}
 }
 @media (max-width: 365px) {
   .home-img img {
