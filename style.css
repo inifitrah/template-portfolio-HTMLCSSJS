@@ -62,10 +62,12 @@ section {
 .menu-mob{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .menu-mob .modes{
   display: none;
+  margin-right: 2rem;
+  margin-left: 0;
 }
 
 .modes {
@@ -75,10 +77,11 @@ section {
   border-radius: 50%;
   z-index: 999999;
   margin-left: 4rem;
+  margin-right: 0;
 }
 
 
-#modes:active {
+.modes:active {
   background: rgb(0, 0, 0, 0.2);
 }
 
@@ -478,7 +481,7 @@ font-size: 2rem;
     display: block;
   }
   .header .modes {
-    display: block;
+    display: flex;
   }
 
   .navbar .modes {

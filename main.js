@@ -1,5 +1,7 @@
 const menuIcon = document.querySelector("#menu-icon");
 const navbar = document.querySelector(".navbar");
+const sections = document.querySelectorAll("section");
+const navLink = document.querySelectorAll("header nav a");
 const imgAbout = document.querySelector(".about img");
 const portLayer = document.querySelectorAll(".portfolio-layer");
 const arrows = document.querySelectorAll(".arrows");
@@ -8,21 +10,23 @@ const modes = document.getElementById("modes");
 const systemDarkMode =
   window.matchMedia &&
   window.matchMedia("(prefers-color-scheme: dark)").matches;
+
 const containerModal = document.querySelector(".container-modal");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnClose = document.querySelector(".btn-modal");
-const openModal = (callback) => {
+
+const openModal = () => {
   containerModal.classList.remove("hidden");
-  callback()
 };
 const closeModal = () => {
   containerModal.classList.add("hidden");
 };
 // onload = openModal;
 onload = setTimeout(() => {
-   openModal()
-}, 4000)
+   firstLoadModal()
+}, 5000)
+
 // modal
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("btn-modal")) closeModal();
@@ -32,20 +36,66 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !containerModal.classList.contains("hidden"))
     closeModal();
 });
-// modal akhir
+
+
+// sintax oop tipis2 wkwkwk
+class TemplateModal{
+  static author = 'fitrah'
+  constructor(judul, isi, btn = 'sip') {
+    this.judul = judul,
+      this.isi = isi
+    this.btn = btn
+  }
+  metode() {
+   modal.innerHTML = `<img src="img/kece.png" width="50px" height="50px" />
+  <h1>${this.judul}</h1>
+  <p>
+   ${this.isi}
+  </p>
+  <a class="btn btn-modal">${this.btn}</a>`
+  }
+}
+
+const firstLoadModal = () => {
+  const firstLoadModal = new TemplateModal(
+    "Welcome haha.",
+    "Web ini akan terus saya update. Jika ada kritik atau saran atau apalah itu just call me wkwkw"
+  );
+  firstLoadModal.metode()
+  openModal()
+}
+
+const modalPortf = () => {
+  const modalPortf = new TemplateModal(
+    "Project latihan",
+    "Ini adalah project hasil ngikutin video wpu yang bagian javascript hehe",
+    "kece"
+  );
+      modalPortf.metode();
+      setTimeout(() => {
+        openModal();
+      }, 1000);
+}
+// modal akhir\
 
 // mode page
+function toggleImage() {
+  if (image.src.includes("img/logo/trahdark.png")) {
+    image.src = "img/logo/trah.png";
+  } else {
+    image.src = "img/logo/trahdark.png";
+  }
+}
+if (systemDarkMode) {
+  document.body.classList.toggle("active-mode");
+  toggleImage()
+}
+
+
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("bxs-moon")) {
     e.target.classList.toggle("bxs-sun");
     document.body.classList.toggle("active-mode");
-    function toggleImage() {
-      if (image.src.includes("img/logo/trahdark.png")) {
-        image.src = "img/logo/trah.png";
-      } else {
-        image.src = "img/logo/trahdark.png";
-      }
-    }
     toggleImage();
   }
   // last
@@ -56,30 +106,39 @@ document.addEventListener("click", (e) => {
   }
 });
 
+
 // arrow di portfbox
 arrows.forEach((arr, index) => {
+  let isEventActive = true
   arr.addEventListener("mouseenter", () => {
     arr.classList.add("bx-x");
     portLayer[index].classList.add("translated");
+     if (isEventActive) {
+       modalPortf();
+       isEventActive = false;
+     }
   });
-
+  
   arr.addEventListener("click", () => {
     arr.classList.toggle("bx-x");
     portLayer[index].classList.toggle("translated");
+    if (isEventActive) {
+      modalPortf()
+      isEventActive = false
+    }
   });
+
 });
 // last
 
-//
-const sections = document.querySelectorAll("section");
-const navLink = document.querySelectorAll("header nav a");
+
+
 window.onscroll = () => {
   sections.forEach((sec) => {
     const top = window.scrollY;
     const offset = sec.offsetTop - 150;
     const height = sec.offsetHeight;
     const id = sec.getAttribute("id");
-
     if (top >= offset && top < offset + height) {
       navLink.forEach((links) => {
         links.classList.remove("active");
@@ -106,6 +165,9 @@ window.onscroll = () => {
   menuIcon.classList.remove("bx-x");
   navbar.classList.remove("active");
 };
+
+
+
 
 // // library
 // // typing
