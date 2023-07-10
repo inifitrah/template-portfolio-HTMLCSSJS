@@ -64,18 +64,6 @@ const firstLoadModal = () => {
   firstLoadModal.metode()
   openModal()
 }
-
-const modalPortf = () => {
-  const modalPortf = new TemplateModal(
-    "Project latihan",
-    "Ini adalah project hasil ngikutin video wpu yang bagian javascript hehe",
-    "kece"
-  );
-      modalPortf.metode();
-      setTimeout(() => {
-        openModal();
-      }, 1000);
-}
 // modal akhir\
 
 // mode page
@@ -86,12 +74,16 @@ function toggleImage() {
     image.src = "img/logo/trahdark.png";
   }
 }
+
 if (systemDarkMode) {
-  document.body.classList.toggle("active-mode");
+const btnModePage = document.querySelectorAll('.bxs-moon')
+btnModePage.forEach((e) => {
+    document.body.classList.add("active-mode");
+    e.classList.add('bxs-sun')
+  })
   toggleImage()
 }
-
-
+  
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("bxs-moon")) {
     e.target.classList.toggle("bxs-sun");
@@ -109,14 +101,9 @@ document.addEventListener("click", (e) => {
 
 // arrow di portfbox
 arrows.forEach((arr, index) => {
-  let isEventActive = true
   arr.addEventListener("mouseenter", () => {
     arr.classList.add("bx-x");
     portLayer[index].classList.add("translated");
-     if (isEventActive) {
-       modalPortf();
-       isEventActive = false;
-     }
   });
   
   arr.addEventListener("click", () => {
